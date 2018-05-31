@@ -19,17 +19,6 @@ require __DIR__ . '/../vendor/autoload.php';
 		<script src="common/bootstrap/js/bootstrap.min.js"></script>
 		<script src="common/scripts/common.js"></script>
 		<link href="common/styles/common.css" rel="stylesheet">
-
-		<link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="res/styles/common.css">
-
-		<script src="res/bootstrap/js/bootstrap.min.js"></script>
-		<script src="res/scripts/common.js"></script>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -37,8 +26,8 @@ require __DIR__ . '/../vendor/autoload.php';
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">Plum</a>
 				</div>
-				
-<!-- 				<div class="collapse navbar-collapse" id="nav_target">
+				<!--
+				<div class="collapse navbar-collapse" id="nav_target">
 					<ul class="nav navbar-nav navbar-right">
 						
 						<li class="dropdown">
@@ -48,8 +37,8 @@ require __DIR__ . '/../vendor/autoload.php';
 							</ul>
 						</li>
 					</ul>
-				</div> -->
-				
+				</div>
+				-->
 			</div>
 		</nav>
 		<div class="container">
@@ -57,22 +46,39 @@ require __DIR__ . '/../vendor/autoload.php';
 
 <?php
 // load Plum
-$indigo = new indigo\main(
+$plum = new hk\plum\main(
 	array(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
+		'preview_server' => array(
+			array(
+				'name' => 'preview1',
+				'path' => './../repos/preview1/',
+				'url' => 'http://preview1.localhost/'
+			),
+			array(
+				'name' => 'preview2',
+				'path' => './../repos/preview2/',
+				'url' => 'http://preview2.localhost/'
+			),
+			array(
+				'name' => 'preview3',
+				'path' => './../repos/preview3/',
+				'url' => 'http://preview3.localhost/'
+			)
+		),
 		'git' => array(
 			'repository' => './../repos/master/',
 			'protocol' => 'https',
 			'host' => 'github.com',
-			'url' => 'github.com/gushikawa/indigo-test-project.git',
+			'url' => 'github.com/hk-r/px2-sample-project.git',
 			'username' => 'hoge',
 			'password' => 'fuga'
 		)
 	)
 );
 
-echo $indigo->run();
+echo $plum->run();
 ?>
 
 		</div>
