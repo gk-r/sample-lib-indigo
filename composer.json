@@ -1,0 +1,32 @@
+{
+    "name": "hk-r/sample-lib-indigo",
+    "description": "",
+    "keywords": ["pickles2"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyota Hiyoshi",
+            "email": "hiyoshi-kyota@imjp.co.jp"
+        }
+    ],
+    "scripts":{
+        "test": [
+
+        ]
+    } ,
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+		"pickles2/lib-indigo": "dev-develop"
+    },
+    "autoload": {
+
+    },
+    "extra": {
+        "px2package": {
+            "name": "sample-lib-indigo",
+            "type": "project"
+        }
+    }
+}
