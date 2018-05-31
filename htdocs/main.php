@@ -58,7 +58,7 @@ require __DIR__ . '/../vendor/autoload.php';
 <?php
 
 // 実行環境に合わせてパスを設定
-require_once('./vendor/autoload.php');
+require_once('./../vendor/autoload.php');
 
 // load Plum
 $indigo = new indigo\main(
