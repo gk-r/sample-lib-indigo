@@ -4,6 +4,23 @@ ini_set('display_errors', 0);
 // require_once("./../.px_execute.php");
 require __DIR__ . '/../vendor/autoload.php';
 
+// load Plum
+$indigo = new indigo\main(
+	array(
+		'_POST' => $_POST,
+		'_GET' => $_GET,
+		'git' => array(
+			'repository' => './../repos/master/',
+			'protocol' => 'https',
+			'host' => 'github.com',
+			'url' => 'github.com/gushikawa/indigo-test-project.git',
+			'username' => 'hoge',
+			'password' => 'fuga'
+		)
+	)
+);
+
+echo $indigo->run();
 ?>
 
 <!DOCTYPE html>
@@ -54,30 +71,6 @@ require __DIR__ . '/../vendor/autoload.php';
 		</nav>
 		<div class="container">
 
-
-<?php
-
-// 実行環境に合わせてパスを設定
-require_once('./../vendor/autoload.php');
-
-// load Plum
-$indigo = new indigo\main(
-	array(
-		'_POST' => $_POST,
-		'_GET' => $_GET,
-		'git' => array(
-			'repository' => './../repos/master/',
-			'protocol' => 'https',
-			'host' => 'github.com',
-			'url' => 'github.com/gushikawa/indigo-test-project.git',
-			'username' => 'hoge',
-			'password' => 'fuga'
-		)
-	)
-);
-
-echo $indigo->run();
-?>
 
 		</div>
 		<div id="loader-bg">
