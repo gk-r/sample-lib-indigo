@@ -38,7 +38,7 @@ require __DIR__ . '/../vendor/autoload.php';
 					<a class="navbar-brand" href="#">Plum</a>
 				</div>
 				
-				<div class="collapse navbar-collapse" id="nav_target">
+<!-- 				<div class="collapse navbar-collapse" id="nav_target">
 					<ul class="nav navbar-nav navbar-right">
 						
 						<li class="dropdown">
@@ -48,7 +48,7 @@ require __DIR__ . '/../vendor/autoload.php';
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				
 			</div>
 		</nav>
@@ -58,6 +58,7 @@ require __DIR__ . '/../vendor/autoload.php';
 <?php
 // load Plum
 $indigo = new indigo\main(
+	array(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
 		'git' => array(
@@ -68,6 +69,7 @@ $indigo = new indigo\main(
 			'username' => 'hoge',
 			'password' => 'fuga'
 		)
+	)
 );
 
 echo $indigo->run();
