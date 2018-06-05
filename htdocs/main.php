@@ -55,6 +55,7 @@ require __DIR__ . '/../vendor/autoload.php';
 		<div class="container">
 <?php
 echo 'hello world.';
+echo realpath('.');;
 ?>
 
 
