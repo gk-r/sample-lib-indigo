@@ -53,11 +53,6 @@ require __DIR__ . '/../vendor/autoload.php';
 			</div>
 		</nav>
 		<div class="container">
-<?php
-echo 'hello world.';
-echo realpath('.');;
-?>
-
 
 <?php
 // load Plum
