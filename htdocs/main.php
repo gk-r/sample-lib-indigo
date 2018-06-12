@@ -20,15 +20,30 @@ require __DIR__ . '/../vendor/autoload.php';
 		<script src="common/scripts/common.js"></script>
 		<link href="common/styles/common.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="res/styles/common.css">
+		<link rel="stylesheet" href="./../indigo_dir/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./../indigo_dir/styles/common.css">
 
-		<script src="res/bootstrap/js/bootstrap.min.js"></script>
-		<script src="res/scripts/common.js"></script>
+		<script src="./../indigo_dir/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./../indigo_dir/scripts/common.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
+
+
+		<script>
+			$(function() {
+				
+				var dateFormat = 'yy-mm-dd';
+				
+				$.datepicker.setDefaults($.datepicker.regional["ja"]);
+				
+				$("#datepicker").datepicker({
+     			   dateFormat: dateFormat
+    			});
+			});
+		</script>
 
 	</head>
 	<body>
