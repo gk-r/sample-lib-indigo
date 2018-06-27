@@ -24,7 +24,7 @@
         "php": ">=5.4.0"
     },
     "require-dev": {
-		"pickles2/lib-indigo": "dev-test/2018-05-31"
+		"pickles2/lib-indigo": "dev-test/2018-06-21"
     },
     "autoload": {
 
