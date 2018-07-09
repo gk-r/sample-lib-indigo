@@ -50,10 +50,10 @@ require __DIR__ . '/../vendor/autoload.php';
 		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Plum</a>
+					<a class="navbar-brand" href="#">Indigo</a>
 				</div>
 				
-				<div class="collapse navbar-collapse" id="nav_target">
+				<!-- <div class="collapse navbar-collapse" id="nav_target">
 					<ul class="nav navbar-nav navbar-right">
 						
 						<li class="dropdown">
@@ -63,7 +63,7 @@ require __DIR__ . '/../vendor/autoload.php';
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				
 			</div>
 		</nav>
@@ -75,8 +75,25 @@ $indigo = new indigo\main(
 	array(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
+
+		// indigo作業ディレクトリ
+		'indigo_workdir_path' => './../indigo_dir/',
+		// 本番環境パス
+		'project_real_path' => '/var/www/html/indigo-test-project/',
+
+		'time_zone' => 'Asia/Tokyo',
+
+		'db_type' => null, // 'mysql' or null
+		'mysql_db_name' => 'dummy_dbname',
+		'mysql_db_host' => 'dummy_dbhost',
+		'mysql_db_user' => 'dummy_user',
+		'mysql_db_pass' => 'dummy_pass',
+
+		'max_reserve_record' => 10,
+		'max_backup_generation' => 5,
+
 		'git' => array(
-			'repository' => './../indigo_dir/repos/master/',
+			// 'repository' => './../indigo_dir/repos/master/',
 			'protocol' => 'https',
 			'host' => 'github.com',
 			'url' => 'github.com/gushikawa/indigo-test-project.git',

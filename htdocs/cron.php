@@ -77,14 +77,31 @@ $cron = new indigo\cron(
 	array(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
-		'git' => array(
-			'repository' => './../indigo_dir/repos/master/',
-			'protocol' => 'https',
-			'host' => 'github.com',
-			'url' => 'github.com/gushikawa/indigo-test-project.git',
-			'username' => 'hoge',
-			'password' => 'fuga'
-		)
+
+		// cron実行ファイル
+		'project_real_path' => '/var/www/html/sample-lib-indigo/htdocs/cron.php',
+
+		// indigo作業ディレクトリ
+		'indigo_workdir_path' => './../indigo_dir/',
+		// 本番環境パス
+		'project_real_path' => '/var/www/html/indigo-test-project/',
+
+		'time_zone' => 'Asia/Tokyo',
+
+		'db_type' => null, // 'mysql' or null
+		'mysql_db_name' => 'dummy_dbname',
+		'mysql_db_host' => 'dummy_dbhost',
+		'mysql_db_user' => 'dummy_user',
+		'mysql_db_pass' => 'dummy_pass',
+
+		// 'git' => array(
+		// 	'repository' => './../indigo_dir/repos/master/',
+		// 	'protocol' => 'https',
+		// 	'host' => 'github.com',
+		// 	'url' => 'github.com/gushikawa/indigo-test-project.git',
+		// 	'username' => 'hoge',
+		// 	'password' => 'fuga'
+		// )
 	)
 );
 
