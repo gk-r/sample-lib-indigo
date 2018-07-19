@@ -88,6 +88,8 @@ $cron = new indigo\cron(
 
 		'time_zone' => 'Asia/Tokyo',
 
+		'user_id' => 'batchUser',
+
 		'db_type' => null, // 'mysql' or null
 		'mysql_db_name' => 'dummy_dbname',
 		'mysql_db_host' => 'dummy_dbhost',

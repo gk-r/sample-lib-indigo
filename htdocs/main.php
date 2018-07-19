@@ -12,13 +12,13 @@ require __DIR__ . '/../vendor/autoload.php';
 		<meta charset="UTF-8">
 		<title>Plum</title>
 		<!-- BootstrapのCSS読み込み -->
-		<link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 		<!-- jQuery読み込み -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- BootstrapのJS読み込み -->
-		<script src="common/bootstrap/js/bootstrap.min.js"></script>
+<!-- 		<script src="common/bootstrap/js/bootstrap.min.js"></script>
 		<script src="common/scripts/common.js"></script>
-		<link href="common/styles/common.css" rel="stylesheet">
+		<link href="common/styles/common.css" rel="stylesheet"> -->
 
 		<link rel="stylesheet" href="./../indigo_dir/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./../indigo_dir/styles/common.css">
@@ -82,6 +82,8 @@ $indigo = new indigo\main(
 		'project_real_path' => '/var/www/html/indigo-test-project/',
 
 		'time_zone' => 'Asia/Tokyo',
+
+		'user_id' => 'testUser01',
 
 		'db_type' => null, // 'mysql' or null
 		'mysql_db_name' => 'dummy_dbname',
