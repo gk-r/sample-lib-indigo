@@ -101,7 +101,7 @@ $cron = new indigo\cron(
 		'server' => array(
 				array(
 						'name' => 'server1',
-						'real_path' => '/var/www/html/indigo-test-project/'
+						'real_path' => '/var/www/html/indigo-test-project/',
 						'protocol' => null, // null or 'ssh' or 'ftp'
 						'ip' => '',
 						'port' => '',
@@ -110,7 +110,7 @@ $cron = new indigo\cron(
 				),
 				array(
 						'name' => 'server2',
-						'real_path' => '/var/www/html/indigo-test-project2/'
+						'real_path' => '/var/www/html/indigo-test-project2/',
 						'protocol' => null, // null or 'ssh' or 'ftp'
 						'ip' => '',
 						'port' => '',
