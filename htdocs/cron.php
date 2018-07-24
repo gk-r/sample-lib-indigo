@@ -78,13 +78,11 @@ $cron = new indigo\cron(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
 
-		// cron実行ファイル
-		'project_real_path' => '/var/www/html/sample-lib-indigo/htdocs/cron.php',
+		// // cron実行ファイル
+		// 'project_real_path' => '/var/www/html/sample-lib-indigo/htdocs/cron.php',
 
 		// indigo作業ディレクトリ
 		'indigo_workdir_path' => './../indigo_dir/',
-		// 本番環境パス
-		'project_real_path' => '/var/www/html/indigo-test-project/',
 
 		'time_zone' => 'Asia/Tokyo',
 
@@ -95,6 +93,31 @@ $cron = new indigo\cron(
 		'mysql_db_host' => 'dummy_dbhost',
 		'mysql_db_user' => 'dummy_user',
 		'mysql_db_pass' => 'dummy_pass',
+
+		// 後で削除
+		'server_real_path' => '/var/www/html/indigo-test-project/',
+		
+		// 本番環境パス（同期先）
+		'server' => array(
+				array(
+						'name' => 'server1',
+						'real_path' => '/var/www/html/indigo-test-project/'
+						'protocol' => null, // null or 'ssh' or 'ftp'
+						'ip' => '',
+						'port' => '',
+						'user_name' => '',
+						'password' => ''
+				),
+				array(
+						'name' => 'server2',
+						'real_path' => '/var/www/html/indigo-test-project2/'
+						'protocol' => null, // null or 'ssh' or 'ftp'
+						'ip' => '',
+						'port' => '',
+						'user_name' => '',
+						'password' => ''
+				)
+		),
 
 		// 'git' => array(
 		// 	'repository' => './../indigo_dir/repos/master/',
