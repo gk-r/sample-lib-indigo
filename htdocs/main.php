@@ -122,6 +122,10 @@ $indigo = new indigo\main(
 				)
 		),
 
+		'ignore' => array(
+			'.git'
+		),
+
 		'git' => array(
 			// 'repository' => './../indigo_dir/repos/master/',
 			'protocol' => 'https',
