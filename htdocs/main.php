@@ -10,7 +10,7 @@ require __DIR__ . '/../vendor/autoload.php';
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Plum</title>
+		<title>Indigo</title>
 		<!-- BootstrapのCSS読み込み -->
 		<!-- <link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 		<!-- jQuery読み込み -->
@@ -76,8 +76,13 @@ $indigo = new indigo\main(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
 
-		// indigo作業ディレクトリ
-		'indigo_workdir_path' => './../indigo_dir/',
+		// mainクラス呼び出しディレクトリ
+		'param_realpath'		=> '/var/www/html/sample-lib-indigo/htdocs/',
+		'param_relativepath'	=> './',
+
+		// indigo作業ディレクトリ（ドキュメントルートからの相対パス）
+		'workdir_realpath'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
+		'workdir_relativepath'	=> './../indigo_dir/',
 
 		'time_zone' => 'Asia/Tokyo',
 
