@@ -123,7 +123,8 @@ $indigo = new indigo\main(
 		),
 
 		'ignore' => array(
-			'.git'
+			'.git',
+			'.htaccess'
 		),
 
 		'git' => array(
