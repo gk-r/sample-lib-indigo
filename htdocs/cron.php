@@ -11,7 +11,7 @@ require __DIR__ . '/../vendor/autoload.php';
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Plum</title>
+		<title>Indigo</title>
 		<!-- BootstrapのCSS読み込み -->
 		<link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- jQuery読み込み -->
@@ -32,40 +32,13 @@ require __DIR__ . '/../vendor/autoload.php';
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
 		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
 
-
-		<script>
-			$(function() {
-				
-				var dateFormat = 'yy-mm-dd';
-				
-				$.datepicker.setDefaults($.datepicker.regional["ja"]);
-				
-				$("#datepicker").datepicker({
-     			   dateFormat: dateFormat
-    			});
-			});
-		</script>
-
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Plum</a>
+					<a class="navbar-brand" href="#">Indigo</a>
 				</div>
-				
-				<div class="collapse navbar-collapse" id="nav_target">
-					<ul class="nav navbar-nav navbar-right">
-						
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a id="init_btn" style="cursor:pointer;">Initialize</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				
 			</div>
 		</nav>
 		<div class="container">
@@ -78,11 +51,13 @@ $cron = new indigo\cron(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
 
-		// // cron実行ファイル
-		// 'project_real_path' => '/var/www/html/sample-lib-indigo/htdocs/cron.php',
+		// mainクラス呼び出しディレクトリ
+		'param_realpath'		=> '/var/www/html/sample-lib-indigo/htdocs/',
+		'param_relativepath'	=> './',
 
-		// indigo作業ディレクトリ
-		'indigo_workdir_path' => './../indigo_dir/',
+		// indigo作業ディレクトリ（ドキュメントルートからの相対パス）
+		'workdir_realpath'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
+		'workdir_relativepath'	=> './../indigo_dir/',
 
 		'time_zone' => 'Asia/Tokyo',
 
@@ -118,6 +93,11 @@ $cron = new indigo\cron(
 						'password' => ''
 				)
 		),
+
+		'ignore' => array(
+			'.git',
+			'.htaccess'
+		)
 
 		// 'git' => array(
 		// 	'repository' => './../indigo_dir/repos/master/',

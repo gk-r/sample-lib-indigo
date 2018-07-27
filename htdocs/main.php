@@ -52,19 +52,6 @@ require __DIR__ . '/../vendor/autoload.php';
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">Indigo</a>
 				</div>
-				
-				<!-- <div class="collapse navbar-collapse" id="nav_target">
-					<ul class="nav navbar-nav navbar-right">
-						
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a id="init_btn" style="cursor:pointer;">Initialize</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div> -->
-				
 			</div>
 		</nav>
 		<div class="container">
