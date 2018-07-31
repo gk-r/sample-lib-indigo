@@ -44,9 +44,9 @@ require __DIR__ . '/../vendor/autoload.php';
 		<div class="container">
 
 <?php
-
+echo 'start';
 // load Plum
-$cron = new indigo\cron(
+$main = new indigo\main(
 	array(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
@@ -110,7 +110,7 @@ $cron = new indigo\cron(
 	)
 );
 
-echo $cron->run();
+echo $main->cron_run();
 ?>
 
 		</div>

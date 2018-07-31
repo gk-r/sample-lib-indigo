@@ -67,7 +67,7 @@ $indigo = new indigo\main(
 		'param_realpath'		=> '/var/www/html/sample-lib-indigo/htdocs/',
 		'param_relativepath'	=> './',
 
-		// indigo作業ディレクトリ（ドキュメントルートからの相対パス）
+		// indigo作業ディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
 		'workdir_realpath'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
 		'workdir_relativepath'	=> './../indigo_dir/',
 
@@ -96,7 +96,7 @@ $indigo = new indigo\main(
 						'ip' => '',
 						'port' => '',
 						'user_name' => '',
-						'password' => '',
+						'password' => ''
 				),
 				array(
 						'name' => 'server2',
@@ -105,7 +105,7 @@ $indigo = new indigo\main(
 						'ip' => '',
 						'port' => '',
 						'user_name' => '',
-						'password' => '',
+						'password' => ''
 				)
 		),
 

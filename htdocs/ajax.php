@@ -5,7 +5,8 @@ ini_set('display_errors', 0);
 require __DIR__ . '/../vendor/autoload.php';
 
 // load Plum
-$indigo = new indigo\gitManager(
+$ajax = new indigo\ajax(
+	null,
 	array(
 		'_POST' => $_POST,
 		'branch_name'		 => $_GET['branch_name'],
@@ -13,5 +14,5 @@ $indigo = new indigo\gitManager(
 	)
 );
 
-echo $indigo->get_commit_hash();
+echo $ajax->get_commit_hash();
 ?>
