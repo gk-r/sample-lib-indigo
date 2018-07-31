@@ -6,7 +6,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // load Plum
 $ajax = new indigo\ajax(
-	null,
 	array(
 		'_POST' => $_POST,
 		'branch_name'		 => $_GET['branch_name'],
