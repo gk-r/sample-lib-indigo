@@ -5,41 +5,6 @@ ini_set('display_errors', 0);
 // require_once("./../.px_execute.php");
 require __DIR__ . '/../vendor/autoload.php';
 
-?>
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Indigo</title>
-		<!-- BootstrapのCSS読み込み -->
-		<!-- <link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-		<!-- jQuery読み込み -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- BootstrapのJS読み込み -->
-<!-- 		<script src="common/bootstrap/js/bootstrap.min.js"></script>
-		<script src="common/scripts/common.js"></script>
-		<link href="common/styles/common.css" rel="stylesheet"> -->
-
-		<link rel="stylesheet" href="./../res/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./../res/styles/common.css">
-
-		<script src="./../res/bootstrap/js/bootstrap.min.js"></script>
-		<script src="./../res/scripts/common.js"></script>
-
-	</head>
-	<body>
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Indigo</a>
-				</div>
-			</div>
-		</nav>
-		<div class="container">
-
-<?php
-
 // load Plum
 $main = new indigo\main(
 	array(
@@ -111,12 +76,3 @@ $main = new indigo\main(
 
 echo $main->cron_run();
 ?>
-
-		</div>
-		<div id="loader-bg">
-			<div id="loading">
-				<img src="common/images/loader.gif">
-			</div>
-		</div>
-	</body>
-</html>
