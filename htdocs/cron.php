@@ -6,73 +6,49 @@ ini_set('display_errors', 0);
 require __DIR__ . '/../vendor/autoload.php';
 
 // load Plum
-$main = new indigo\main(
+$indigo = new indigo\main(
 	array(
-		'_POST' => $_POST,
-		'_GET' => $_GET,
+		// '_POST' => $_POST,
+		// '_GET' => $_GET,
 
-		// mainクラス呼び出しディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'param_realpath'		=> '/var/www/html/sample-lib-indigo/htdocs/',
-		'param_relativepath'	=> './',
+		// indigo作業用ディレクトリ（絶対パス）
+		'realpath_workdir' => '/var/www/html/sample-lib-indigo/indigo_dir/',
 
-		// indigo作業ディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'workdir_realpath'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
-		'workdir_relativepath'	=> './../indigo_dir/',
-
-		// リソースディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'resdir_realpath'		=> '/var/www/html/sample-lib-indigo/res/',
-		'resdir_relativepath'	=> './../res/',
-
-		'time_zone' => 'Asia/Tokyo',
-
+		// ユーザID
 		'user_id' => 'batchUser',
 
-		'db_type' => null, // 'mysql' or null
-		'mysql_db_name' => 'dummy_dbname',
-		'mysql_db_host' => 'dummy_dbhost',
-		'mysql_db_user' => 'dummy_user',
-		'mysql_db_pass' => 'dummy_pass',
+		// DB設定
+		'db' => array(
 
-		// // 後で削除
-		// 'server_real_path' => '/var/www/html/indigo-test-project/',
-		
-		// 本番環境パス（同期先）
+			// 'mysql' or null（nullの場合はSQLite3を使用）　※バージョン0.1.0時点ではmysql未対応
+			'db_type' => null,
+
+			// 以下mysql用の設定項目
+			'mysql_db_name' => '',
+			'mysql_db_host' => '',
+			'mysql_db_user' => '',
+			'mysql_db_pass' => ''
+		),
+
+		// 本番環境パス（同期先）※バージョン0.1.0時点では先頭の設定内容のみ有効
 		'server' => array(
 				array(
 						'name' => 'server1',
 						'real_path' => '/var/www/html/indigo-test-project/'
-						// 'protocol' => null, // null or 'ssh' or 'ftp'
-						// 'ip' => '',
-						// 'port' => '',
-						// 'user_name' => '',
-						// 'password' => ''
 				),
 				array(
 						'name' => 'server2',
 						'real_path' => '/var/www/html/indigo-test-project2/'
-						// 'protocol' => null, // null or 'ssh' or 'ftp'
-						// 'ip' => '',
-						// 'port' => '',
-						// 'user_name' => '',
-						// 'password' => ''
 				)
 		),
 
+		// 同期除外ディレクトリ、またはファイル
 		'ignore' => array(
 			'.git',
 			'.htaccess'
 		)
-
-		// 'git' => array(
-		// 	'repository' => './../indigo_dir/repos/master/',
-		// 	'protocol' => 'https',
-		// 	'host' => 'github.com',
-		// 	'url' => 'github.com/gushikawa/indigo-test-project.git',
-		// 	'username' => 'hoge',
-		// 	'password' => 'fuga'
-		// )
 	)
 );
 
-echo $main->cron_run();
+echo $indigo->cron_run();
 ?>

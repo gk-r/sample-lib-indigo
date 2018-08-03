@@ -13,8 +13,12 @@ require __DIR__ . '/../vendor/autoload.php';
 		<title>Indigo</title>
 		<!-- BootstrapのCSS読み込み -->
 		<!-- <link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+		
+		
 		<!-- jQuery読み込み -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+		
+
 		<!-- BootstrapのJS読み込み -->
 <!-- 		<script src="common/bootstrap/js/bootstrap.min.js"></script>
 		<script src="common/scripts/common.js"></script>
@@ -26,7 +30,8 @@ require __DIR__ . '/../vendor/autoload.php';
 		<script src="./../res/bootstrap/js/bootstrap.min.js"></script>
 		<script src="./../res/scripts/common.js"></script>
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
 		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
@@ -63,67 +68,57 @@ $indigo = new indigo\main(
 		'_POST' => $_POST,
 		'_GET' => $_GET,
 
-		// mainクラス呼び出しディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'param_realpath'		=> '/var/www/html/sample-lib-indigo/htdocs/',
-		'param_relativepath'	=> './',
+		// indigo作業用ディレクトリ（絶対パス）
+		'realpath_workdir'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
 
-		// indigo作業ディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'workdir_realpath'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
-		'workdir_relativepath'	=> './../indigo_dir/',
+		// リソースディレクトリ（ドキュメントルートからの相対パス）
+		'relativepath_resourcedir'	=> './../res/',
 
-		// リソースディレクトリ（絶対パス＆ドキュメントルートからの相対パス）
-		'resdir_realpath'		=> '/var/www/html/sample-lib-indigo/res/',
-		'resdir_relativepath'	=> './../res/',
+		// ajax呼出クラス（絶対パス）
+		'realpath_ajax_call'		=> '/var/www/html/sample-lib-indigo/htdocs/',
 
+		// 画面表示上のタイムゾーン
 		'time_zone' => 'Asia/Tokyo',
 
-		'user_id' => 'testUser01',
+		// ユーザID
+		'user_id' => 'user01',
 
-		'db_type' => null, // 'mysql' or null
-		'mysql_db_name' => '',
-		'mysql_db_host' => '',
-		'mysql_db_user' => '',
-		'mysql_db_pass' => '',
+		// DB設定
+		'db' => array(
+			// 'mysql' or null（nullの場合はSQLite3を使用する）
+			'db_type' => null,
+			'mysql_db_name' => '',
+			'mysql_db_host' => '',
+			'mysql_db_user' => '',
+			'mysql_db_pass' => ''
+		),
 
+		// 予約最大件数
 		'max_reserve_record' => 10,
+		// バックアップ世代管理件数
 		'max_backup_generation' => 5,
 
-		// // 後で削除
-		// 'server_real_path' => '/var/www/html/indigo-test-project/',
-
-		// 本番環境パス（同期先）
+		// 本番環境パス（同期先）※バージョン0.1.0時点では先頭の設定内容のみ有効
 		'server' => array(
 				array(
 						'name' => 'server1',
 						'real_path' => '/var/www/html/indigo-test-project/'
-						// 'protocol' => null, // null or 'ssh' or 'ftp'
-						// 'ip' => '',
-						// 'port' => '',
-						// 'user_name' => '',
-						// 'password' => ''
 				),
 				array(
 						'name' => 'server2',
 						'real_path' => '/var/www/html/indigo-test-project2/'
-						// 'protocol' => null, // null or 'ssh' or 'ftp'
-						// 'ip' => '',
-						// 'port' => '',
-						// 'user_name' => '',
-						// 'password' => ''
 				)
 		),
 
+		// 同期除外ディレクトリ、またはファイル
 		'ignore' => array(
 			'.git',
 			'.htaccess'
 		),
 
+		// Git情報定義
 		'git' => array(
-			'repository' => './../indigo_dir/repos/master/',
-			// 'protocol' => 'https',
-			// 'host' => 'github.com',
-			// 'url' => 'github.com/gushikawa/indigo-test-project.git',
-			'giturl' => 'https://github.com/gushikawa/indigo-test-project.git',
+			'giturl' => 'https://github.com/gk-r/indigo-test-project.git',
 			'username' => 'hoge',
 			'password' => 'fuga'
 		)

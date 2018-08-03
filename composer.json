@@ -1,12 +1,12 @@
 {
-    "name": "hk-r/sample-lib-indigo",
+    "name": "gk-r/sample-lib-indigo",
     "description": "",
     "keywords": ["pickles2"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Kyota Hiyoshi",
-            "email": "hiyoshi-kyota@imjp.co.jp"
+            "name": "Natsuki Gushikawa",
+            "email": "natsuki.gushikawa@imjp.co.jp"
         }
     ],
     "scripts":{
