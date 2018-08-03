@@ -74,8 +74,8 @@ $indigo = new indigo\main(
 		// リソースディレクトリ（ドキュメントルートからの相対パス）
 		'relativepath_resourcedir'	=> './../res/',
 
-		// ajax呼出クラス（絶対パス）
-		'realpath_ajax_call'		=> '/var/www/html/sample-lib-indigo/htdocs/ajax.php',
+		// ajax呼出クラス（ドキュメントルートからの相対パス）
+		'realpath_ajax_call'		=> './ajax.php',
 
 		// 画面表示上のタイムゾーン
 		'time_zone' => 'Asia/Tokyo',
