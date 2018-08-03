@@ -9,7 +9,7 @@ $ajax = new indigo\ajax(
 	array(
 		'_POST' => $_POST,
 		'branch_name'		 => $_GET['branch_name'],
-		'workdir_relativepath'	 => $_GET['workdir_relativepath']
+		'workdir_realpath'	 => $_GET['workdir_realpath']
 	)
 );
 
