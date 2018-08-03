@@ -31,7 +31,7 @@ require __DIR__ . '/../vendor/autoload.php';
 		<script src="./../res/scripts/common.js"></script>
 
 		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-		
+
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
 		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
@@ -75,7 +75,7 @@ $indigo = new indigo\main(
 		'relativepath_resourcedir'	=> './../res/',
 
 		// ajax呼出クラス（絶対パス）
-		'realpath_ajax_call'		=> '/var/www/html/sample-lib-indigo/htdocs/',
+		'realpath_ajax_call'		=> '/var/www/html/sample-lib-indigo/htdocs/ajax.php',
 
 		// 画面表示上のタイムゾーン
 		'time_zone' => 'Asia/Tokyo',
