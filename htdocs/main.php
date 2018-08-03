@@ -16,7 +16,7 @@ require __DIR__ . '/../vendor/autoload.php';
 		
 		
 		<!-- jQuery読み込み -->
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		
 
 		<!-- BootstrapのJS読み込み -->
