@@ -30,7 +30,7 @@
         }
     ],
     "require-dev": {
-		"pickles2/lib-indigo": "dev-test/2018-06-21"
+		"pickles2/lib-indigo": "^0.1"
     },
     "autoload": {
 
