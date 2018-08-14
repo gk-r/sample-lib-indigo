@@ -7,8 +7,7 @@ $parameter_array = array(
 	'_GET' => $_GET,
 
 	// indigo作業用ディレクトリ（絶対パス）
-	// 'realpath_workdir'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
-	'realpath_workdir'	 	=> '/workspace/sample-lib-indigo/indigo_dir/',
+	'realpath_workdir'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
 
 	// リソースディレクトリ（ドキュメントルートからの相対パス）
 	'relativepath_resourcedir'	=> './../res/',
