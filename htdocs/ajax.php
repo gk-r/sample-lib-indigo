@@ -1,17 +1,14 @@
 <?php
 ini_set('display_errors', 0);
 
-// require_once("./../.px_execute.php");
 require __DIR__ . '/../vendor/autoload.php';
+// indigoの動作に必要なパラメタ記載ファイル
+require __DIR__ . '/parameter.php';
 
-// load Plum
-$indigo = new indigo\ajax(
-	array(
-		'_POST' => $_POST,
-		'branch_name'		 => $_GET['branch_name'],
-		'realpath_workdir'	 => $_GET['realpath_workdir']
-	)
-);
+// load indigo\ajax
+// parameter.php->$parameter_array
+$indigo = new indigo\ajax($parameter_array);
 
+// get_commit_hashメソッド実行
 echo $indigo->get_commit_hash();
 ?>
