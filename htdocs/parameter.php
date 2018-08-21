@@ -1,63 +1,68 @@
 
 <?php
 
-$parameter_array = array(
+function call_parameter () {
 
-	'_POST' => $_POST,
-	'_GET' => $_GET,
+	$parameter = array(
 
-	// indigo作業用ディレクトリ（絶対パス）
-	'realpath_workdir'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
+		'_POST' => $_POST,
+		'_GET' => $_GET,
 
-	// リソースディレクトリ（ドキュメントルートからの相対パス）
-	'relativepath_resourcedir'	=> './../res/',
+		// indigo作業用ディレクトリ（絶対パス）
+		'realpath_workdir'	 	=> '/var/www/html/sample-lib-indigo/indigo_dir/',
 
-	// ajax呼出クラス（ドキュメントルートからの相対パス）
-	'realpath_ajax_call'		=> './ajax.php',
+		// リソースディレクトリ（ドキュメントルートからの相対パス）
+		'relativepath_resourcedir'	=> './../res/',
 
-	// 画面表示上のタイムゾーン
-	'time_zone' => 'Asia/Tokyo',
+		// ajax呼出クラス（ドキュメントルートからの相対パス）
+		'realpath_ajax_call'		=> './ajax.php',
 
-	// ユーザID
-	'user_id' => 'user01',
+		// 画面表示上のタイムゾーン
+		'time_zone' => 'Asia/Tokyo',
 
-	// DB設定
-	'db' => array(
-		// 'mysql' or null（nullの場合はSQLite3を使用する）
-		'db_type' => null,
-		'mysql_db_name' => '',
-		'mysql_db_host' => '',
-		'mysql_db_user' => '',
-		'mysql_db_pass' => ''
-	),
+		// ユーザID
+		'user_id' => 'user01',
 
-	// 予約最大件数
-	'max_reserve_record' => 10,
-	// バックアップ世代管理件数
-	'max_backup_generation' => 5,
+		// DB設定
+		'db' => array(
+			// 'mysql' or null（nullの場合はSQLite3を使用する）
+			'db_type' => null,
+			'mysql_db_name' => '',
+			'mysql_db_host' => '',
+			'mysql_db_user' => '',
+			'mysql_db_pass' => ''
+		),
 
-	// 本番環境パス（同期先）※バージョン0.1.0時点では先頭の設定内容のみ有効
-	'server' => array(
-			array(
-					'name' => 'server1',
-					'real_path' => '/var/www/html/indigo-test-project/'
-			),
-			array(
-					'name' => 'server2',
-					'real_path' => '/var/www/html/indigo-test-project2/'
-			)
-	),
+		// 予約最大件数
+		'max_reserve_record' => 10,
+		// バックアップ世代管理件数
+		'max_backup_generation' => 5,
 
-	// 同期除外ディレクトリ、またはファイル
-	'ignore' => array(
-		'.git',
-		'.htaccess'
-	),
+		// 本番環境パス（同期先）※バージョン0.1.0時点では先頭の設定内容のみ有効
+		'server' => array(
+				array(
+						'name' => 'server1',
+						'real_path' => '/var/www/html/indigo-test-project/'
+				),
+				array(
+						'name' => 'server2',
+						'real_path' => '/var/www/html/indigo-test-project2/'
+				)
+		),
 
-	// Git情報定義
-	'git' => array(
-		'giturl' => 'https://github.com/gk-r/indigo-test-project.git',
-		'username' => 'hoge',
-		'password' => 'fuga'
-	)
-);
+		// 同期除外ディレクトリ、またはファイル
+		'ignore' => array(
+			'.git',
+			'.htaccess'
+		),
+
+		// Git情報定義
+		'git' => array(
+			'giturl' => 'https://github.com/gk-r/indigo-test-project.git',
+			'username' => 'hoge',
+			'password' => 'fuga'
+		)
+	);
+
+    return $parameter;
+};

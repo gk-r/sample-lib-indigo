@@ -53,9 +53,10 @@ require __DIR__ . '/parameter.php';
 
 <?php
 
+// parameter.php->call_parameter()
+$parameter = call_parameter();
 // load indigo\main
-// parameter.php->$parameter_array
-$indigo = new indigo\main($parameter_array);
+$indigo = new indigo\main($parameter);
 
 // runメソッド実行
 echo $indigo->run();
